@@ -10,7 +10,7 @@ class Onboardbasekit < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/Onboardbase/onboardbasekit/releases/download/v0.0.4/onboardbasekit_Darwin_arm64.tar.gz"
-      sha256 "4ac142c24f64c7a9d243df672609ac15a4bc41217e93052fd0fd2bb7a7d828b1"
+      sha256 "64b27e44f49dafbe40dd0aeb8ad40c6188e58d36b5747eabfb398ff4abf2b1f5"
 
       def install
         bin.install "onboardbasekit"
@@ -18,7 +18,7 @@ class Onboardbasekit < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/Onboardbase/onboardbasekit/releases/download/v0.0.4/onboardbasekit_Darwin_x86_64.tar.gz"
-      sha256 "425fe3ed0b71e714f6f80e81350cdbefce33fe2484933585e72ef805c89523cf"
+      sha256 "f40e94d802fc0c3d2d4c113b827efb9ba54766775ae5ccaa2ee9f6be987c28d3"
 
       def install
         bin.install "onboardbasekit"
@@ -29,7 +29,7 @@ class Onboardbasekit < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Onboardbase/onboardbasekit/releases/download/v0.0.4/onboardbasekit_Linux_arm64.tar.gz"
-      sha256 "148b91d46e401120ba30fabc32d64954ec96f108156dde689718d9ff2f96695e"
+      sha256 "9bc34e9c107f010913ecf411e5a99841611160482a9bba305d916471a2f07ede"
 
       def install
         bin.install "onboardbasekit"
@@ -37,7 +37,7 @@ class Onboardbasekit < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/Onboardbase/onboardbasekit/releases/download/v0.0.4/onboardbasekit_Linux_x86_64.tar.gz"
-      sha256 "2ff720092eeb6d54ed1de1031437c0b7352fa760b81fce7a1ebb84ac797b0f06"
+      sha256 "19b1af48fc81f088c57f292f1e69d71eaf0ab25cc324656df058c72af3240706"
 
       def install
         bin.install "onboardbasekit"
