@@ -5,20 +5,20 @@
 class Onboardbasekit < Formula
   desc ""
   homepage "https://github.com/Onboardbase/onboardbasekit"
-  version "1.0.3"
+  version "1.0.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Onboardbase/onboardbasekit/releases/download/v1.0.3/onboardbasekit_Darwin_arm64.tar.gz"
-      sha256 "b1d43c10c20affb874b575ded1c3bda6b0fe4ec48bcfbcb1ca9911253dd3ed52"
+      url "https://github.com/Onboardbase/onboardbasekit/releases/download/v1.0.4/onboardbasekit_Darwin_arm64.tar.gz"
+      sha256 "105072fe78908333cadf4b5910c4894fefde8e8ef321e32251d2c09913168a1e"
 
       def install
         bin.install "onboardbasekit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Onboardbase/onboardbasekit/releases/download/v1.0.3/onboardbasekit_Darwin_x86_64.tar.gz"
-      sha256 "81c1e0f14ef8b9d0bbf88c6a754e6afd70b7cacba15f579f5ef6508b810c652d"
+      url "https://github.com/Onboardbase/onboardbasekit/releases/download/v1.0.4/onboardbasekit_Darwin_x86_64.tar.gz"
+      sha256 "5923021b1a79a528d0a55b5eeec64dd6451bead037e6a7b16ff0c8362aa269ec"
 
       def install
         bin.install "onboardbasekit"
@@ -28,16 +28,16 @@ class Onboardbasekit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Onboardbase/onboardbasekit/releases/download/v1.0.3/onboardbasekit_Linux_arm64.tar.gz"
-      sha256 "c36dfc1f2551f5a29e30fa634f5bc9700c6e37851dffa705be323c9ae7801da5"
+      url "https://github.com/Onboardbase/onboardbasekit/releases/download/v1.0.4/onboardbasekit_Linux_arm64.tar.gz"
+      sha256 "e441f354668795b5ea6b2dc566b78ecb0ac4763ec83def6a5694bd7af1f8434f"
 
       def install
         bin.install "onboardbasekit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Onboardbase/onboardbasekit/releases/download/v1.0.3/onboardbasekit_Linux_x86_64.tar.gz"
-      sha256 "714c88b413b165bd6b5359f3c8dbeafe411e080f067e503f8317807bd7033347"
+      url "https://github.com/Onboardbase/onboardbasekit/releases/download/v1.0.4/onboardbasekit_Linux_x86_64.tar.gz"
+      sha256 "96e6321a06cd2e34c648355548052c1a59f736ffa8f67fef0444c0f7ee786082"
 
       def install
         bin.install "onboardbasekit"
