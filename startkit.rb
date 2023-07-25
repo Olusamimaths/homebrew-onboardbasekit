@@ -8,17 +8,17 @@ class Startkit < Formula
   version "1.0.13"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Darwin_arm64.tar.gz"
-      sha256 "bde1711e203aef993cffe1c3e2062179c0e01b4369fef9f1269bbb529c3aa200"
+    if Hardware::CPU.intel?
+      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Darwin_x86_64.tar.gz"
+      sha256 "beb18745aca4ddd2b0b3fcbddf717c47d1bf4797843462b0f8a7c1a92dd74cf9"
 
       def install
         bin.install "startkit"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Darwin_x86_64.tar.gz"
-      sha256 "66c73d75441766629ec1fabf86f27da988a2c71114d0fc7821cc1aff65a16c69"
+    if Hardware::CPU.arm?
+      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Darwin_arm64.tar.gz"
+      sha256 "9b8b4331e20d7a1d81e79c77643afc7d7d2091ffcf779b880c48d55c92f69169"
 
       def install
         bin.install "startkit"
@@ -29,7 +29,7 @@ class Startkit < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Linux_x86_64.tar.gz"
-      sha256 "f70e40fd33aa0580770a4434a8ae493b4ca5fd7f4594a7f3125fd2109c82e9c6"
+      sha256 "01b44b9e315170c922402e3e608b7e28dd411107d55f97a0cc1240dc819c7ced"
 
       def install
         bin.install "startkit"
@@ -37,7 +37,7 @@ class Startkit < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Linux_arm64.tar.gz"
-      sha256 "adfdc7c8f81dc86ee92956122b190986ded4607acd232b9c5fe6646469bfc723"
+      sha256 "152f730976e25886289db0f39b2488743aa93606689789a1eb27d641423b68fe"
 
       def install
         bin.install "startkit"
