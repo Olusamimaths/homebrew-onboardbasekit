@@ -5,20 +5,20 @@
 class Startkit < Formula
   desc ""
   homepage "https://github.com/Onboardbase/startkit"
-  version "1.0.13"
+  version "1.0.14"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Darwin_x86_64.tar.gz"
-      sha256 "beb18745aca4ddd2b0b3fcbddf717c47d1bf4797843462b0f8a7c1a92dd74cf9"
+      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.14/startkit_Darwin_x86_64.tar.gz"
+      sha256 "e53cfcd773d3a6f556ab59ced98440b6da4f0f67ecba074168c6d8f552d58b49"
 
       def install
         bin.install "startkit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Darwin_arm64.tar.gz"
-      sha256 "9b8b4331e20d7a1d81e79c77643afc7d7d2091ffcf779b880c48d55c92f69169"
+      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.14/startkit_Darwin_arm64.tar.gz"
+      sha256 "9182fd68fb64fc5c6f18bbe3cbb6e878b5695082e82a4298c9bc2a0c426133e0"
 
       def install
         bin.install "startkit"
@@ -28,16 +28,16 @@ class Startkit < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Linux_x86_64.tar.gz"
-      sha256 "01b44b9e315170c922402e3e608b7e28dd411107d55f97a0cc1240dc819c7ced"
+      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.14/startkit_Linux_x86_64.tar.gz"
+      sha256 "33c46c06987fb4aa12d84ed2fc10c1235323ffc1cc31b5d2f489851443a7c1e1"
 
       def install
         bin.install "startkit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Linux_arm64.tar.gz"
-      sha256 "152f730976e25886289db0f39b2488743aa93606689789a1eb27d641423b68fe"
+      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.14/startkit_Linux_arm64.tar.gz"
+      sha256 "a7fe5f4776efcfd8531f4e3089507c8683c8364448aa9d964a787e304fcaedc1"
 
       def install
         bin.install "startkit"
