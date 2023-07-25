@@ -5,20 +5,20 @@
 class Startkit < Formula
   desc ""
   homepage "https://github.com/Onboardbase/startkit"
-  version "1.0.12"
+  version "1.0.13"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.12/startkit_Darwin_x86_64.tar.gz"
-      sha256 "160b36d77cfef2e25e13990530eeadba3d578c7acc4c06c0d4b089322073f613"
+    if Hardware::CPU.arm?
+      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Darwin_arm64.tar.gz"
+      sha256 "bde1711e203aef993cffe1c3e2062179c0e01b4369fef9f1269bbb529c3aa200"
 
       def install
         bin.install "startkit"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.12/startkit_Darwin_arm64.tar.gz"
-      sha256 "33a38454f29ed5bdeac3e23f9ce9b4372e7250bc8f79fb8127017d674a61c03a"
+    if Hardware::CPU.intel?
+      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Darwin_x86_64.tar.gz"
+      sha256 "66c73d75441766629ec1fabf86f27da988a2c71114d0fc7821cc1aff65a16c69"
 
       def install
         bin.install "startkit"
@@ -27,17 +27,17 @@ class Startkit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.12/startkit_Linux_arm64.tar.gz"
-      sha256 "73a3b51350d964ddd0bbf726113eeba33e71b99cffac380404cf0c7e2ab625fb"
+    if Hardware::CPU.intel?
+      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Linux_x86_64.tar.gz"
+      sha256 "f70e40fd33aa0580770a4434a8ae493b4ca5fd7f4594a7f3125fd2109c82e9c6"
 
       def install
         bin.install "startkit"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.12/startkit_Linux_x86_64.tar.gz"
-      sha256 "f2ab9e1be0a854ec7cefbc290860a0ee7d5e2255196f85e991e10b7007602679"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Onboardbase/startkit/releases/download/v1.0.13/startkit_Linux_arm64.tar.gz"
+      sha256 "adfdc7c8f81dc86ee92956122b190986ded4607acd232b9c5fe6646469bfc723"
 
       def install
         bin.install "startkit"
